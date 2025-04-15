@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.black{
+    color: $black;
+}
+
+.blanc{
+    color: $blanc;
+}
+
+.img{
+    @include imgMixin();
+}
+
+.lien{
+    @include lien();
+}
+
+.col12{
+    grid-column: span 12;
+}
+.col6{
+    grid-column: span 6;
+}
+.col4{
+    grid-column: span 4 ;
+}
+.col3{
+    grid-column: span 3;
+}
