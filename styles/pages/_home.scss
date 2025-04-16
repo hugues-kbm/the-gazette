@@ -1,1 +1,43 @@
 @use '../abstracts' as *;
+
+.container-fluid{
+    margin-bottom: $spacingXl;
+    .block{
+        position: relative;
+        height: 40vh;
+        &::before{
+            @include filtreBlack;
+        }
+        .text{
+            color: $blanc;
+            padding: 1rem;
+            .date{
+                color: $blanc;
+            }
+        }
+    }
+}
+
+.politicelorem{
+    color: $grisf;
+    margin: $spacingLg 0;
+}
+
+.politice-lien{
+    display: flex;
+    .post-continue-btn{
+        padding: 1rem 1.5rem;
+        border: 1px solid;
+        margin-bottom: $spacingLg;
+        .btn-continue{
+            font-family: $andada;
+            color: $black;
+            
+        }
+        img{
+            display: inline-block;
+            width: 20px;
+            vertical-align: middle;
+        }
+    }
+}

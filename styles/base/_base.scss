@@ -1,5 +1,9 @@
 @use '../abstracts' as *;
 
+body{
+    color: $black;
+}
+
 .black{
     color: $black;
 }
@@ -8,12 +12,63 @@
     color: $blanc;
 }
 
+h1{
+    font-family: $cormorant;
+    margin-bottom: 1rem;
+    line-height: 30px;
+}
+h2{
+    font-family: $cormorant;
+    line-height: 30px;
+    margin-bottom: 1rem;
+}
+h3{
+    font-family: $andada;
+    margin-bottom: 1rem;
+    a{
+        font-family: $andada;
+        font-weight: 200;  
+    }
+}
+p{
+    margin-bottom: 1rem;
+}
+
 .img{
     @include imgMixin();
 }
 
 .lien{
     @include lien();
+}
+
+a{
+    @include lien();
+    font-weight: 200;
+}
+
+.absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wapper{
+    padding: 0 1rem;
+}
+
+.row{
+    @include gridMixin();
+}
+
+.block{
+    height: 100%;
+}
+
+.container-grid{
+    @include gridMixin(0);
 }
 
 .col12{
@@ -27,4 +82,21 @@
 }
 .col3{
     grid-column: span 3;
+}
+
+.tag{
+    display: inline-block;
+    background-color: $red;
+    padding: 5px 10px;
+    font-size: $pText;
+    margin-bottom: 1rem;
+    a{
+        color: $blanc;
+        font-weight: 600;
+    }
+}
+
+.date{
+    font-style: italic;
+    color: $grisf;
 }
