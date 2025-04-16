@@ -11,13 +11,33 @@
 }
 .header-section2{
     padding: 0.5rem 1rem;
+    .navbar{
+        @media screen and ( min-width: 768px ) { 
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
     .nav{
         display: none;
+        @media screen and ( min-width: 768px ) { 
+            display: inline-block;
+            a{
+                font-weight: 600;
+                margin-right: 7px;
+            }
+        }
     }
     .nav-search{
-        display: none;
+        display: inline-block;
+        @media screen and ( min-width: 768px ) { 
+            display: block;
+        }
     }
     .navbouton{
+        @media screen and ( min-width: 768px ) { 
+            display: none;
+        }
         .nav-bouton{
             display: inline-block;
             background-color: red;
@@ -36,6 +56,9 @@
                 display: inline-block;
                 font-size: $gText;
                 font-weight: 500;
+                p{
+                    margin: 0;
+                }
             }
         }
     }

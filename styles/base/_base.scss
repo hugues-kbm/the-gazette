@@ -12,6 +12,10 @@ body{
     color: $blanc;
 }
 
+.grisf{
+    color: $grisf;
+}
+
 h1{
     font-family: $cormorant;
     margin-bottom: 1rem;
@@ -21,6 +25,9 @@ h2{
     font-family: $cormorant;
     line-height: 30px;
     margin-bottom: 1rem;
+    @media screen and ( min-width: 768px ) { 
+        font-size: $gTitle;
+    }
 }
 h3{
     font-family: $andada;
@@ -30,8 +37,42 @@ h3{
         font-weight: 200;  
     }
 }
-p{
+h4{
+    font-family: $andada;
     margin-bottom: 1rem;
+    
+    @media screen and ( min-width: 768px ) { 
+        font-size: 2rem;
+    }
+    a{
+        font-family: $andada;
+        font-weight: 200;  
+    }
+}
+h5{
+    font-family: $andada;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    a{
+        font-family: $andada;
+        font-weight: 200;  
+    }
+}
+p{
+    @media screen and ( min-width: 768px ) { 
+        font-size: $mText;
+        line-height: 2rem;
+    }
+    margin-bottom: 1rem;
+}
+
+.marginBottom{
+    margin-bottom: $spacingLg;
+}
+
+.boder-bottom{
+    border-bottom: 1px solid $gris;
+    margin-bottom: $spacingLg;
 }
 
 .img{
@@ -57,6 +98,9 @@ a{
 
 .wapper{
     padding: 0 1rem;
+    @media screen and ( min-width: 768px ) { 
+        padding: 0 3rem;
+    }
 }
 
 .row{
@@ -64,6 +108,7 @@ a{
 }
 
 .block{
+    position: relative;
     height: 100%;
 }
 
@@ -74,6 +119,9 @@ a{
 .col12{
     grid-column: span 12;
 }
+.col9{
+    grid-column: span 9;
+}
 .col6{
     grid-column: span 6;
 }
@@ -82,6 +130,25 @@ a{
 }
 .col3{
     grid-column: span 3;
+}
+
+.col-md-12{
+    grid-column: span 12;
+}
+.col-md-9{
+    grid-column: span 9;
+}
+.col-md-6{
+    grid-column: span 6;
+}
+.col-md-4{
+    grid-column: span 4 ;
+}
+.col-md-3{
+    grid-column: span 3;
+}
+.col-md-2{
+    grid-column: span 2;
 }
 
 .tag{
@@ -96,7 +163,37 @@ a{
     }
 }
 
+
 .date{
     font-style: italic;
     color: $grisf;
+}
+
+.comments{
+    display: block;
+    font-size: $pText;
+    font-weight: bold;
+    margin: $spacingMd 0;
+}
+
+button{
+    color: $blanc;
+    border: none;
+}
+
+.ptext{
+    font-size: $mText;
+    a{
+        color: $black;
+    }
+}
+
+ul{
+    li{
+        list-style: none;
+        a{
+            color: $blanc;
+            font-size: $pText;
+        }
+    }
 }
